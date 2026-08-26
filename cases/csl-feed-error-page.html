@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+<!--
+  Synthetic test fixture for parse-failure testing (BR-2801).
+  Simulates a real-world failure mode: the source returns 200 OK (or is fronted by a WAF/CDN
+  that intercepts the request) but the body is an HTML error/block page instead of the expected
+  JSON feed. This should surface as SanctionsParseException (Jackson fails to parse HTML as
+  CSLResponse), not silently return an empty result set.
+-->
+</body>
+</html>
